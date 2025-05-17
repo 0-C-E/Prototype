@@ -1,7 +1,8 @@
 FROM alpine:latest
 
 # Install common tools
-RUN apk add --no-cache bash git
+RUN apk add --no-cache bash git \
+    nodejs npm
 
 # Setup default user
 ARG USERNAME=vscode

@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "React Dev Server",
+            "type": "shell",
+            "command": "npm run dev",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "presentation": {
+                "clear": true,
+                "close": true,
+                "panel": "dedicated",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "React Build",
+            "type": "shell",
+            "group": "build",
+            "command": "npm run build",
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated",
+                "clear": true
+            }
+        },
+        {
+            "label": "Prettify All Files",
+            "type": "shell",
+            "command": "npx prettier --write .",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "presentation": {
+                "close": true
+            }
+        },
+        {
+            "label": "Prettify Current File",
+            "type": "shell",
+            "command": "npx prettier --write ${file}",
+            "presentation": {
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "Delete old Git branches",
+            "type": "shell",
+            "command": "git fetch --prune && git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D",
+            "presentation": {
+                "showReuseMessage": false
+            }
+        }
+    ]
+}

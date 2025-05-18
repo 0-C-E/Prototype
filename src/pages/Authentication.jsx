@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import FormField from '/src/components/authentication/FormField'
-import PasswordField from '/src/components/authentication/PasswordField'
-import PasswordRequirements from '/src/components/authentication/PasswordRequirements'
+import FormField from '/src/modules/authentication/components/FormField'
+import PasswordField from '/src/modules/authentication/components/PasswordField'
+import PasswordRequirements from '/src/modules/authentication/components/PasswordRequirements'
 import '/src/assets/styles/Authentication.css'
 
 export default function AuthenticationPage() {

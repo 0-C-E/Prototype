@@ -1,4 +1,4 @@
-import DefaultReactApp from '../features/home/DefaultReactApp'
+import DefaultReactApp from '../modules/home/DefaultReactApp'
 
 const Home = () => {
     return <DefaultReactApp />

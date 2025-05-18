@@ -1,37 +1,50 @@
 :root {
     /* Font settings */
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     line-height: 1.5;
-    font-weight: 400;
 
     /* Color scheme */
     color-scheme: light dark;
-    color: rgb(255 255 255 / 87%);
-    background-color: #242424;
+    color: rgb(from light-dark(#212121, #ffffff) r g b / 87%);
+    background-color: light-dark(#dbdbdb, #242424);
 
     /* Font smoothing */
     font-synthesis: none;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    /* Navigation bar */
+    --nav-height: 3.5rem;
+    --nav-width: 100%;
+    --nav-background: #333;
+    --nav-color: light-dark(#1a1a1a, #f9f9f9);
+
+    /* Elements color variables */
+    --element-background-color: light-dark(#f9f9f9, #1a1a1a);
+    --element-highlight-color: #646cff;
+    --element-highlight-color-active: light-dark(#535bf2, #474ae8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 a {
     font-weight: 500;
-    color: #646cff;
+    color: var(--element-highlight-color);
     text-decoration: inherit;
 }
 
 a:hover {
-    color: #535bf2;
+    color: var(--element-highlight-color-active);
 }
 
 body {
-    margin: 0;
     display: flex;
-    place-items: center;
     min-width: 320px;
-    min-height: 100vh;
+    min-height: 100svh;
 }
 
 h1 {
@@ -45,14 +58,13 @@ button {
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: var(--element-background-color);
     cursor: pointer;
     transition: border-color 0.25s;
 }
 
 button:hover {
-    border-color: #646cff;
+    border-color: var(--element-highlight-color);
 }
 
 button:focus,
@@ -60,17 +72,8 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #fff;
-    }
-
-    a:hover {
-        color: #747bff;
-    }
-
-    button {
-        background-color: #f9f9f9;
-    }
+#root {
+    display: flex;
+    flex: 1;
+    width: 100%;
 }

@@ -6,7 +6,7 @@ export default function DefaultReactApp() {
     const [count, setCount] = useState(0)
 
     return (
-        <div className="home-page">
+        <>
             <h1>Home</h1>
             <div>
                 <a href="https://vite.dev" target="_blank">
@@ -32,6 +32,6 @@ export default function DefaultReactApp() {
             <p className="read-the-docs">
                 Click on the Vite and React logos to learn more
             </p>
-        </div>
+        </>
     )
 }

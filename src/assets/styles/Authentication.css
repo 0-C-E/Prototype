@@ -1,12 +1,5 @@
-#authentication {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-
-section {
+section#login,
+section#register {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-medium);
@@ -16,37 +9,14 @@ section {
     width: clamp(320px, 100%, 500px);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-medium);
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-button[type='submit'] {
-    color: white;
-    cursor: pointer;
-    background-color: var(--color-secondary);
-    border: none;
-    border-radius: var(--border-radius-large);
-    font-size: var(--font-size-small);
-    padding: 1rem 2rem;
-}
-
-button[type='submit']:hover {
-    background-color: var(--color-primary);
-}
-
 .form-field {
     position: relative;
     width: 100%;
 }
 
 .form-field input {
+    padding: 1rem 0;
     width: 100%;
-    padding: 1rem;
 }
 
 .form-field label {
@@ -59,26 +29,20 @@ button[type='submit']:hover {
 
 .form-field input:focus + label,
 .form-field input.filled + label {
-    top: -0.75rem;
-    left: 0.75rem;
-    font-size: 0.75rem;
-    background: white;
-    padding: 0 0.25rem;
+    top: -0.75em;
+    left: 0.75em;
+    font-size: 0.75em;
+    padding: 0 0.25em;
+}
+
+.icons {
+    cursor: pointer;
+    margin-left: 0.5em;
 }
 
 .input-with-icon {
     display: flex;
     align-items: center;
-}
-
-.icons {
-    cursor: pointer;
-    margin-left: 0.5rem;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
 }
 
 .password-requirement-check {
@@ -87,6 +51,19 @@ ul {
 
 .password-requirement-x {
     color: var(--color-error);
+}
+
+#authentication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#password-requirements > ul > li {
+    align-items: center;
+    display: flex;
 }
 
 @media screen and (max-width: 500px) {

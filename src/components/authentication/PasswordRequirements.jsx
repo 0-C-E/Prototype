@@ -19,10 +19,8 @@ export default function PasswordRequirements({ password }) {
                     return (
                         <li key={i}>
                             {valid ? (
-                                // <CheckCircle className="password-requirement-check" />
                                 <p className="password-requirement-check">✓</p>
                             ) : (
-                                // <XCircle className="password-requirement-x" />
                                 <p className="password-requirement-x">✗</p>
                             )}
                             <span>{rule.text}</span>

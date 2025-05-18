@@ -47,6 +47,14 @@ body {
     min-height: 100svh;
 }
 
+code {
+    background-color: var(--element-background-color);
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    color: light-dark(#333, #ccc);
+}
+
 h1 {
     font-size: 3.2em;
     line-height: 1.1;

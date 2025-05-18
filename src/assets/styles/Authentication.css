@@ -1,0 +1,96 @@
+#authentication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius-large);
+    padding: var(--spacing-medium);
+    width: clamp(320px, 100%, 500px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+button[type='submit'] {
+    color: white;
+    cursor: pointer;
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: var(--border-radius-large);
+    font-size: var(--font-size-small);
+    padding: 1rem 2rem;
+}
+
+button[type='submit']:hover {
+    background-color: var(--color-primary);
+}
+
+.form-field {
+    position: relative;
+    width: 100%;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 1rem;
+}
+
+.form-field label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.form-field input:focus + label,
+.form-field input.filled + label {
+    top: -0.75rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+    background: white;
+    padding: 0 0.25rem;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.password-requirement-check {
+    color: var(--color-success);
+}
+
+.password-requirement-x {
+    color: var(--color-error);
+}
+
+@media screen and (max-width: 500px) {
+    section {
+        border-radius: 0;
+    }
+}

@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import Authentication from './pages/Authentication'
 import Login from './pages/Login'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
@@ -11,7 +12,7 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/auth" element={<Authentication />} />
                 </Routes>
             </main>
         </>

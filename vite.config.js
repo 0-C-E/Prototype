@@ -5,4 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
     base: '/Prototype/',
     plugins: [react()],
+    vite: {
+        server: {
+            watch: {
+                usePolling: true,
+                interval: 100,
+            },
+        },
+    },
 })

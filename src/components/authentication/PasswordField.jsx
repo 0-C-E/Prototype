@@ -20,11 +20,7 @@ export default function PasswordField({ id, name, label, value, onChange }) {
                     title="Toggle password visibility"
                     onClick={() => setVisible((v) => !v)}
                 >
-                    {visible ? (
-                        <p>Hide password</p>
-                    ) : (
-                        <p>Show password</p>
-                    )}
+                    {visible ? <p>Hide password</p> : <p>Show password</p>}
                 </div>
             </div>
         </div>

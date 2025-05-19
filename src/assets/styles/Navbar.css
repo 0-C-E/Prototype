@@ -23,7 +23,7 @@
 }
 
 .navbar-links li a {
-    color: rgb(from light-dark(#212121, #ffffff) r g b / 87%);
+    color: var(--font-color);
     font-weight: bold;
     text-decoration: none;
 }

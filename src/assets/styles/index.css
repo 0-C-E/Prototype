@@ -4,8 +4,9 @@
     line-height: 1.5;
 
     /* Color scheme */
+    --font-color: rgb(from light-dark(#212121, #fff) r g b / 87%);
     color-scheme: light dark;
-    color: rgb(from light-dark(#212121, #ffffff) r g b / 87%);
+    color: var(--font-color);
     background-color: light-dark(#dbdbdb, #242424);
 
     /* Font smoothing */

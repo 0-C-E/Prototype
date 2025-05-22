@@ -1,0 +1,7 @@
+.card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    width: 100%;
+}

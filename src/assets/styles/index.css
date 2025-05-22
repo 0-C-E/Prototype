@@ -1,0 +1,116 @@
+:root {
+    /* Font settings */
+    font-family: sans-serif;
+    line-height: 1.5;
+
+    /* Color scheme */
+    --font-color: rgb(from light-dark(#212121, #fff) r g b / 87%);
+    color-scheme: light dark;
+    color: var(--font-color);
+    background-color: light-dark(#dbdbdb, #242424);
+
+    /* Font smoothing */
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Navigation bar */
+    --nav-height: 3.5rem;
+    --nav-width: 100%;
+    --nav-background: #333;
+    --nav-color: light-dark(#1a1a1a, #f9f9f9);
+
+    /* Elements color variables */
+    --element-background-color: light-dark(#f9f9f9, #1a1a1a);
+    --element-highlight-color: #646cff;
+    --element-highlight-color-active: light-dark(#535bf2, #474ae8);
+
+    /* Spacing sizes for margins, paddings, and gaps */
+    --spacing-small: 0.4rem;
+    --spacing-medium: 1.6rem;
+    --spacing-large: 3.2rem;
+
+    /* Border-radius sizes */
+    --border-radius-small: 8px;
+    --border-radius-medium: 16px;
+    --border-radius-large: 32px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-weight: 500;
+    color: var(--element-highlight-color);
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--element-highlight-color-active);
+}
+
+body {
+    display: flex;
+    min-width: 320px;
+    min-height: 100svh;
+}
+
+code {
+    background-color: var(--element-background-color);
+    padding: 4px;
+    border-radius: calc(var(--border-radius-small) / 2);
+    font-size: 1.1em;
+    color: light-dark(#333, #ccc);
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    background-color: var(--element-background-color);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.6em 1.2em;
+    transition: border-color 0.25s;
+}
+
+button[type='submit'] {
+    padding: 1rem 2rem;
+}
+
+button:hover {
+    border-color: var(--element-highlight-color);
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+#root {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}

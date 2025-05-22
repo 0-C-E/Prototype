@@ -1,0 +1,8 @@
+main {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-top: var(--nav-height);
+}

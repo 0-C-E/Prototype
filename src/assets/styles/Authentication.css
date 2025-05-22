@@ -1,0 +1,73 @@
+section#login,
+section#register {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    background-color: rgb(0 0 0 / 20%);
+    border-radius: var(--border-radius-large);
+    padding: var(--spacing-medium);
+    width: clamp(320px, 100%, 500px);
+}
+
+.form-field {
+    position: relative;
+    width: 100%;
+}
+
+.form-field input {
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.form-field label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.form-field input:focus + label,
+.form-field input.filled + label {
+    top: -0.75em;
+    left: 0.75em;
+    font-size: 0.75em;
+    padding: 0 0.25em;
+}
+
+.icons {
+    cursor: pointer;
+    margin-left: 0.5em;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+}
+
+.password-requirement-check {
+    color: var(--color-success);
+}
+
+.password-requirement-x {
+    color: var(--color-error);
+}
+
+#authentication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#password-requirements > ul > li {
+    align-items: center;
+    display: flex;
+}
+
+@media screen and (width <= 500px) {
+    section {
+        border-radius: 0;
+    }
+}
